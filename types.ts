@@ -11,7 +11,7 @@ export interface TailwindClass {
   description: string;
   cssRule: string;
   example: string;
-  variants?: string[];
+  variants: string[];
 }
 
 export interface TailwindCategories {
@@ -44,6 +44,11 @@ export interface TailwindCategories {
     };
     lists: TailwindClass[];
   };
+  backgrounds: {
+    color: TailwindClass[];
+    gradient: TailwindClass[];
+    opacity: TailwindClass[];
+  };
   borders: {
     width: TailwindClass[];
     color: TailwindClass[];
@@ -55,11 +60,6 @@ export interface TailwindCategories {
     opacity: TailwindClass[];
     shadow: TailwindClass[];
     blur: TailwindClass[];
-  };
-  backgrounds: {
-    color: TailwindClass[];
-    gradient: TailwindClass[];
-    opacity: TailwindClass[];
   };
   transitions: {
     property: TailwindClass[];
